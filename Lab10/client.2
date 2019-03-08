@@ -1,0 +1,109 @@
+Script started on Fri 23 Nov 2018 06:07:44 PM STD
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ gdb randclient
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.5) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from randclient...done.
+(gdb) break main
+Breakpoint 1 at 0x400b45: file randclient.c, line 24.
+(gdb) run 127.0.0.1
+Starting program: /mnt/d/lazaroel/Lab10/randclient 127.0.0.1
+
+Breakpoint 1, main (argc=2, argv=0x7ffffffee148) at randclient.c:24
+24	    if (argc != 2) {
+(gdb) next
+29	    int soc = connect_to_server(PORT, argv[1]);
+(gdb) next
+^[[Aconnect: Connection refused
+[Inferior 1 (process 156) exited with code 01]
+(gdb) next[K[K[K[Knextrun 127.0.0.1[C[C[C[C[C[C[3Pbreak main[C[C[C[C[C[Crun 127.0.0.1
+Starting program: /mnt/d/lazaroel/Lab10/randclient 127.0.0.1
+
+Breakpoint 1, main (argc=2, argv=0x7ffffffee148) at randclient.c:24
+24	    if (argc != 2) {
+(gdb) next
+29	    int soc = connect_to_server(PORT, argv[1]);
+(gdb) next
+connect: Connection refused
+[Inferior 1 (process 164) exited with code 01]
+(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) 
+[1]+  Stopped                 gdb randclient
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ exit
+exit
+There are stopped jobs.
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ git add bufserver.c
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ git add client.1
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ git add server.1
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ hit[K[K[Kgit add cle[Kient.2
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ git add client[K[K[K[K[K[Kserver.2
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ git commit -m ""f"i"n"i"s"h" "l"a"b"1"0"
+[master 9077378] finish lab10
+ 5 files changed, 309 insertions(+), 8 deletions(-)
+ create mode 100644 Lab10/client.1
+ create mode 100644 Lab10/client.2
+ create mode 100644 Lab10/server.1
+ create mode 100644 Lab10/server.2
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ git push
+Username for 'https://markus.teach.cs.toronto.edu': lazaroel
+Password for 'https://lazaroel@markus.teach.cs.toronto.edu': 
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 4.16 KiB | 0 bytes/s, done.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: [MARKUS] Warning: required 'compile_all.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required 'my_commands.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required 'chat_client.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required 'chat_server.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required 'hcq_server.c' is missing in assignment 'A4'.[K
+remote: [MARKUS] Warning: required file 'compile_all.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required file 'my_commands.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required file 'chat_client.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required file 'chat_server.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required file 'hcq_server.c' is missing in assignment 'A4'.[K
+remote: [MARKUS] Warning: required 'compile_all.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required 'my_commands.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required 'chat_client.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required 'chat_server.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required 'hcq_server.c' is missing in assignment 'A4'.[K
+To https://markus.teach.cs.toronto.edu/git/csc209-2018-09/lazaroel
+   9b8b3f8..9077378  master -> master
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ exit0644 Lab10/client.2
+ create mode 100644 Lab10/server.1
+ create mode 100644 Lab10/server.2
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ git push
+Username for 'https://markus.teach.cs.toronto.edu': lazaroel
+Password for 'https://lazaroel@markus.teach.cs.toronto.edu': 
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 4.16 KiB | 0 bytes/s, done.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: [MARKUS] Warning: required 'compile_all.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required 'my_commands.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required 'chat_client.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required 'chat_server.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required 'hcq_server.c' is missing in assignment 'A4'.[K
+remote: [MARKUS] Warning: required file 'compile_all.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required file 'my_commands.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required file 'chat_client.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required file 'chat_server.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required file 'hcq_server.c' is missing in assignment 'A4'.[K
+remote: [MARKUS] Warning: required 'compile_all.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required 'my_commands.sh' is missing in assignment 'Lab1'.[K
+remote: [MARKUS] Warning: required 'chat_client.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required 'chat_server.c' is missing in assignment 'Lab11'.[K
+remote: [MARKUS] Warning: required 'hcq_

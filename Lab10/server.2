@@ -1,0 +1,91 @@
+Script started on Fri 23 Nov 2018 06:08:05 PM STD
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ gdb bufserver
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.5) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from bufserver...done.
+(gdb) break main
+Breakpoint 1 at 0x400c0e: file bufserver.c, line 18.
+(gdb) next
+The program is not being run.
+(gdb) rubn [K[K[Kn &
+Starting program: /mnt/d/lazaroel/Lab10/bufserver 
+(gdb) 
+Breakpoint 1, main () at bufserver.c:18
+18	int main() {
+ru[K[Knext
+21	    setbuf(stdout, NULL);
+(gdb) next
+23	    struct sockaddr_in *self = init_server_addr(PORT);
+(gdb) next
+24	    int listenfd = set_up_server_socket(self, 5);
+(gdb) next
+27	        int fd = accept_connection(listenfd);
+(gdb) next
+Waiting for a new connection...
+exit
+^Z
+Program received signal SIGTSTP, Stopped (user).
+0x00007fffff1380a0 in __accept_nocancel () at ../sysdeps/unix/syscall-template.S:84
+84	../sysdeps/unix/syscall-template.S: No such file or directory.
+(gdb) 
+[1]+  Stopped                 gdb bufserver
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ exit
+exit
+There are stopped jobs.
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ exit
+Exception ignored in: <gdb.GdbOutputFile object at 0x7f62fbb75da0>
+Traceback (most recent call last):
+  File "/usr/share/gdb/python/gdb/__init__.py", line 43, in flush
+    def flush(self):
+KeyboardInterrupt
+
+Script done on Fri 23 Nov 2018 06:10:03 PM STD
+//www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from bufserver...done.
+(gdb) break main
+Breakpoint 1 at 0x400c0e: file bufserver.c, line 18.
+(gdb) next
+The program is not being run.
+(gdb) rubn [K[K[Kn &
+Starting program: /mnt/d/lazaroel/Lab10/bufserver 
+(gdb) 
+Breakpoint 1, main () at bufserver.c:18
+18	int main() {
+ru[K[Knext
+21	    setbuf(stdout, NULL);
+(gdb) next
+23	    struct sockaddr_in *self = init_server_addr(PORT);
+(gdb) next
+24	    int listenfd = set_up_server_socket(self, 5);
+(gdb) next
+27	        int fd = accept_connection(listenfd);
+(gdb) next
+Waiting for a new connection...
+exit
+^Z
+Program received signal SIGTSTP, Stopped (user).
+0x00007fffff1380a0 in __accept_nocancel () at ../sysdeps/unix/syscall-template.S:84
+84	../sysdeps/unix/syscall-template.S: No such file or directory.
+(gdb) 
+[1]+  Stopped                 gdb bufserver
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ exit
+exit
+There are stopped jobs.
+]0;lazaroel@DESKTOP-D6GMQHA: /mnt/d/lazaroel/Lab10[01;32mlazaroel@DESKTOP-D6GMQHA[00m:[01;34m/mnt/d/lazaroel/Lab10[00m$ exit
+Exception ignored in: <gdb.GdbOutputFile object at 0x7f62fbb75da0>
+Traceback (most recent call last):
+  File "/usr/share/gdb/python/gdb/__init__.py", line 43, in flush
